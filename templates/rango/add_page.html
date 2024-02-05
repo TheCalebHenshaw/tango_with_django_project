@@ -5,7 +5,7 @@
         <title>Rango</title>
     </head>
     <body>
-        <h1>Add a Page</h1>
+        <h1>Add a Page to {{ category.name }}</h1>
         <div>
             <form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
                 {% csrf_token %}
@@ -20,10 +20,5 @@
                     <input type="submit" name="submit" value="Add Page"/>
             </form>
         </div>
-        {% else %
-        <div>
-            <strong>The specified category does not exist!</strong>
-        </div>}
-        {% endif %}
     </body>
 </html>
