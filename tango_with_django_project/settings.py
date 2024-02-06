@@ -90,6 +90,11 @@ DATABASES = {
     }
 }
 
+# Password Section
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    )
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -130,3 +135,5 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_URL = 'rango:login'
